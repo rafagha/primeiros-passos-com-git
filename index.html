@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid</title>
+</head>
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .grid {
+            display: grid;
+            height: 100vh;
+            border: solid red 1px;
+            grid-template-areas: "header header header header" "nav main main main" "footer footer footer footer";
+            grid-template-columns: 0.5fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 3fr 0.3fr; 
+            
+         
+        }
+        header {background-color: yellow; grid-area: header;}
+        nav {background-color: blue; grid-area: nav; display:grid; align-items: center;}
+        main {background-color: aqua; grid-area: main; display:grid; align-items: center; justify-items: center;}
+        footer {background-color: burlywood; grid-area: footer;}
+
+    </style>
+    <div class="grid">
+            <header>header</header>
+            <nav><p> Nullam a vestibulum nibh. Duis imperdiet auctor felis, ac pellentesque elit volutpat vel. Proin viverra leo ac hendrerit dictum. Nunc ut posuere felis, accumsan pretium tortor. Nullam et diam lacus.</p> </nav>
+            <main> a b c<br>d e f
+            </main>
+            <footer>footer</footer>
+    </div>
+</body>
+</html>
